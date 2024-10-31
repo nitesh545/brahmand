@@ -1,0 +1,11 @@
+[package]
+name = "brahmand"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+eframe = "0.29.1"
+egui = "0.29.1"
+egui-sfml = "0.7.0"
+rand = "0.8.5"
+sfml = "0.24.0"
