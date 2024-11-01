@@ -124,7 +124,7 @@ pub struct Position {
     pub(crate) y: f32,
 }
 
-pub struct Velocity {
+pub struct Speed {
     pub(crate) x: f32,
     pub(crate) y: f32,
 }

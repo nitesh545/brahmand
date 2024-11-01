@@ -48,9 +48,20 @@ impl Game {
                             en.add_component(components::Shape::init());
                             en.add_component(components::Enemy{health: 100.0});
                         },
-                        Key::W => {
+                        /*Key::W => {
                             println!("Move forward");
-                        }
+                            let mut ens_pos = self.em.get_entities_by_component::<components::Position>();
+                            let mut ens_spd = self.em.get_entities_by_component::<components::Speed>();
+                            // let mut en = &ens[0];
+                            let pos = ens_pos[0].get_component_mut::<components::Position>();
+                            let spd = ens_spd[0].get_component::<components::Speed>();
+                            if let Some(mut position) = pos {
+                                if let Some(speed) = spd {
+                                    position.x += speed.x;
+                                    position.y += speed.y;
+                                } 
+                            }
+                        },*/
                         _ => (),
                     }
                 }
@@ -63,7 +74,7 @@ impl Game {
         let mut en = self.em.add_entity();
         en.add_component(components::Position{x: (WINDOW_WIDTH / 2) as f32, y: (WINDOW_HEIGHT/2) as f32 });
         en.add_component(components::Shape::init());
-        en.add_component(components::Velocity{x: 50.0, y: 50.0});
+        en.add_component(components::Speed {x: 50.0, y: 50.0});
         en.add_component(components::Player{health: 100.0});
     }
     

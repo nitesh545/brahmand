@@ -1,6 +1,6 @@
 use crate::entity;
-use std::collections::HashMap;
 use crate::entity::Entity;
+use std::collections::HashMap;
 
 pub struct EntityManager {
     entities: Vec<entity::Entity>,
@@ -20,9 +20,9 @@ impl EntityManager {
     pub fn get_entities(&mut self) -> &Vec<Entity> {
         &self.entities
     }
-    pub fn get_entities_by_component<T: 'static>(&mut self) -> Vec<&Entity> {
-        let mut entt: Vec<&Entity> = Vec::new();
-        for entity in self.entities.iter() {
+    pub fn get_entities_by_component<T: 'static>(&mut self) -> Vec<&mut Entity> {
+        let mut entt: Vec<&mut entity::Entity> = Vec::new();
+        for mut entity in self.entities.iter_mut() {
             match entity.get_component::<T>() {
                 Some(n)=> {entt.push(entity)},
                 None => (),
