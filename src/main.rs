@@ -305,6 +305,7 @@ mod entity_manager;
 mod game;
 mod vec2;
 mod component_manager;
+mod world;
 
 fn main() {
     let mut game = game::Game::new();
