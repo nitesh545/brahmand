@@ -1,0 +1,17 @@
+[package]
+name = "brahmand"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy_ecs = "0.14.2"
+bytemuck = "1.20.0"
+cgmath = "0.18.0"
+egui = "0.29.1"
+egui-wgpu = "0.29.1"
+env_logger = "0.11.5"
+log = "0.4.22"
+pollster = "0.4.0"
+rand = "0.8.5"
+wgpu = "23.0.0"
+winit = "0.30.5"
